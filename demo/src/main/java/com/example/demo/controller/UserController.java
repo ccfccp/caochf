@@ -1,15 +1,15 @@
 package com.example.demo.controller;
 
 
+import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,5 +31,11 @@ public class UserController {
         Map<String,String> map = new HashMap<>();
         map.put("mm",userService.Sel(id).toString());
         return map;
+    }
+    @RequestMapping(value = "index", method = RequestMethod.GET)
+    public String getAllUser(Model model){
+        List<User> userList = userService.findAll();
+        model.addAttribute("userlist",userList);
+        return "index";
     }
 }

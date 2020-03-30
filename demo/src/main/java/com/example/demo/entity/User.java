@@ -1,10 +1,13 @@
 package com.example.demo.entity;
 
+import javax.persistence.Table;
+
 /**
  * @Author:wjup
  * @Date: 2018/9/26 0026
  * @Time: 14:39
  */
+@Table(name="t_user")
 public class User {
     private Integer id;
     private String userName;

@@ -5,6 +5,8 @@ import com.example.demo.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @Author:wjup
  * @Date: 2018/9/26 0026
@@ -16,5 +18,9 @@ public class UserService {
     UserMapper userMapper;
     public User Sel(int id){
         return userMapper.Sel(id);
+    }
+
+    public List<User> findAll() {
+        return userMapper.findAll();
     }
 }
