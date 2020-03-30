@@ -1,15 +1,15 @@
-package com.ccf.springbootmybatis;
+package com.example.demom;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan("com.ccf.springbootmybatis.mapper")
 @SpringBootApplication
-public class SpringbootmybatisApplication {
+@MapperScan("com.example.demom.mapper")
+public class DemomApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootmybatisApplication.class, args);
+        SpringApplication.run(DemomApplication.class, args);
     }
 
 }

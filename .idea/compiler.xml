@@ -9,11 +9,13 @@
         <module name="springbootmybatis" />
         <module name="demo2" />
         <module name="demo" />
+        <module name="demom" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="1.8" />
       <module name="demo2" target="1.8" />
+      <module name="demom" target="1.8" />
       <module name="springbootmybatis" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -21,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
       <module name="demo2" options="-parameters" />
+      <module name="demom" options="-parameters" />
       <module name="springbootmybatis" options="-parameters" />
     </option>
   </component>
