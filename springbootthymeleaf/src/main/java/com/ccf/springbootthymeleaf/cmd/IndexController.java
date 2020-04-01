@@ -31,4 +31,9 @@ public class IndexController {
     public String jsgrid(Model model){
         return "testjsgrid/index";
     }
+
+    @GetMapping("/testjqgrid")
+    public String jqgrid(Model model){
+        return "/testjqgrid/testjqgrid";
+    }
 }
