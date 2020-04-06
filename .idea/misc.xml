@@ -5,8 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/demom/pom.xml" />
-        <option value="$PROJECT_DIR$/springbootmybatis/pom.xml" />
         <option value="$PROJECT_DIR$/springbootthymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/c_01_meta/pom.xml" />
       </list>
     </option>
   </component>

@@ -17,6 +17,6 @@ spring:
       static-locations: classpath:/static
 server:
   port: 8182
-#  servlet:
-#    path: /thymeleaf
+  servlet:
+    context-path: /thymeleaf
 

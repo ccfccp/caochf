@@ -3,7 +3,7 @@ package com.ccf.springbootthymeleaf.data;
 import java.util.List;
 import java.util.Map;
 
-public class User {
+public class User_N {
     String username;
     String password;
     List<String> hobbies;

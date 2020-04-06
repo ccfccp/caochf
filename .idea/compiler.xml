@@ -6,27 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
+        <module name="c_01_meta" />
         <module name="demo2" />
-        <module name="demom" />
-        <module name="springbootmybatis" />
         <module name="springbootthymeleaf" />
+        <module name="demo" />
+        <module name="demom" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="c_01_meta" target="1.8" />
       <module name="demo" target="1.8" />
-      <module name="demo2" target="1.8" />
       <module name="demom" target="1.8" />
-      <module name="springbootmybatis" target="1.8" />
       <module name="springbootthymeleaf" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="c_01_meta" options="-parameters" />
       <module name="demo" options="-parameters" />
-      <module name="demo2" options="-parameters" />
       <module name="demom" options="-parameters" />
-      <module name="springbootmybatis" options="-parameters" />
       <module name="springbootthymeleaf" options="-parameters" />
     </option>
   </component>

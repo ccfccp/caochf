@@ -1,6 +1,6 @@
 package com.ccf.springbootthymeleaf.cmd;
 
-import com.ccf.springbootthymeleaf.data.User;
+import com.ccf.springbootthymeleaf.data.User_N;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ public class IndexController {
 
     @GetMapping("/home")
     public String index(Model model) {
-        User user = new User();
+        User_N user = new User_N();
         user.setUsername("jack");
         user.setPassword("112233");
         user.setHobbies(Arrays.asList(new String[]{"singing", "dancing", "football"}));
