@@ -9,6 +9,20 @@
     <file url="file://$PROJECT_DIR$/demom" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demom/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-pattern" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 04 Simple Factory/DESEncrypt.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 04 Simple Factory/sample01/HaierTV.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 04 Simple Factory/sample01/HisenseTV.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 04 Simple Factory/sample01/TVFactory.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 04 Simple Factory/sample01/XMLUtilTV.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 04 Simple Factory/sample02/Administrator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 04 Simple Factory/sample02/Employee.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 04 Simple Factory/sample02/Manager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 04 Simple Factory/sample02/User.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 05 Factory Method/sample01/HaierTV.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 05 Factory Method/sample01/HaierTVFactory.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 05 Factory Method/sample01/HisenseTV.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 05 Factory Method/sample01/HisenseTVFactory.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern/Chapter 05 Factory Method/sample01/XMLUtil.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/selenium" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootnacos" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootthymeleaf" charset="UTF-8" />
