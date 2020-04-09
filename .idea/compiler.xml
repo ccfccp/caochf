@@ -11,6 +11,7 @@
         <module name="demo" />
         <module name="demo2" />
         <module name="demom" />
+        <module name="design-pattern" />
         <module name="selenium" />
         <module name="springbootnacos" />
         <module name="springbootthymeleaf" />
@@ -21,6 +22,7 @@
       <module name="consume" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="demom" target="1.8" />
+      <module name="design-pattern" target="1.8" />
       <module name="selenium" target="1.8" />
       <module name="springbootnacos" target="1.8" />
       <module name="springbootthymeleaf" target="1.8" />
@@ -32,6 +34,7 @@
       <module name="consume" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="demom" options="-parameters" />
+      <module name="design-pattern" options="-parameters" />
       <module name="selenium" options="-parameters" />
       <module name="springbootnacos" options="-parameters" />
       <module name="springbootthymeleaf" options="-parameters" />
