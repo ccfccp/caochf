@@ -7,24 +7,33 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="c_01_meta" />
-        <module name="demo2" />
-        <module name="springbootthymeleaf" />
+        <module name="consume" />
         <module name="demo" />
+        <module name="demo2" />
         <module name="demom" />
+        <module name="selenium" />
+        <module name="springbootnacos" />
+        <module name="springbootthymeleaf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="c_01_meta" target="1.8" />
+      <module name="consume" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="demom" target="1.8" />
+      <module name="selenium" target="1.8" />
+      <module name="springbootnacos" target="1.8" />
       <module name="springbootthymeleaf" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="c_01_meta" options="-parameters" />
+      <module name="consume" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="demom" options="-parameters" />
+      <module name="selenium" options="-parameters" />
+      <module name="springbootnacos" options="-parameters" />
       <module name="springbootthymeleaf" options="-parameters" />
     </option>
   </component>

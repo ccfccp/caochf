@@ -4,8 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/c_01_meta/c_01_meta.iml" filepath="$PROJECT_DIR$/c_01_meta/c_01_meta.iml" />
       <module fileurl="file://$PROJECT_DIR$/caochf.iml" filepath="$PROJECT_DIR$/caochf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consume/consume.iml" filepath="$PROJECT_DIR$/consume/consume.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/demom/demom.iml" filepath="$PROJECT_DIR$/demom/demom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-pattern/design-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/design-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/selenium/selenium.iml" filepath="$PROJECT_DIR$/selenium/selenium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootnacos/springbootnacos.iml" filepath="$PROJECT_DIR$/springbootnacos/springbootnacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootthymeleaf/springbootthymeleaf.iml" filepath="$PROJECT_DIR$/springbootthymeleaf/springbootthymeleaf.iml" />
     </modules>
   </component>
