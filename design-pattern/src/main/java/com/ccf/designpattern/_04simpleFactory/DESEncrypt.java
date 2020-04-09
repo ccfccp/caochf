@@ -1,3 +1,5 @@
+package com.ccf.designpattern._04simpleFactory;
+
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;

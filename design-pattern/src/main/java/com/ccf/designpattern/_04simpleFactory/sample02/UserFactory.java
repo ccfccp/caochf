@@ -1,3 +1,5 @@
+package com.ccf.designpattern._04simpleFactory.sample02;
+
 public class UserFactory
 {
 	public static User getUser(int permission)

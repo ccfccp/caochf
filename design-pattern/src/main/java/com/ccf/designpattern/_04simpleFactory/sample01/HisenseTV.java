@@ -1,3 +1,5 @@
+package com.ccf.designpattern._04simpleFactory.sample01;
+
 public class HisenseTV implements TV
 {
 	public void play()

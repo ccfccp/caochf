@@ -1,3 +1,5 @@
+package com.ccf.designpattern._04simpleFactory.sample02;
+
 public class UserDAO
 {
     public int findPermission(String userName,String userPassword)

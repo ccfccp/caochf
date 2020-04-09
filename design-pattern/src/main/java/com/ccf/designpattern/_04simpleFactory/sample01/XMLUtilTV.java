@@ -1,7 +1,13 @@
-import javax.xml.parsers.*;
-import org.w3c.dom.*;
-import org.xml.sax.SAXException;
-import java.io.*;
+package com.ccf.designpattern._04simpleFactory.sample01;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+
 public class XMLUtilTV
 {
     //该方法用于从XML配置文件中提取品牌名称，并返回该品牌名称

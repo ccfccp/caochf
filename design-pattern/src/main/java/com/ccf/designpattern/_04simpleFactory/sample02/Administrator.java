@@ -1,3 +1,5 @@
+package com.ccf.designpattern._04simpleFactory.sample02;
+
 public class Administrator extends User
 {
 	public Administrator()

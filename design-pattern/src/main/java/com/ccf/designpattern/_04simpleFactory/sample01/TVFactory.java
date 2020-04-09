@@ -1,3 +1,5 @@
+package com.ccf.designpattern._04simpleFactory.sample01;
+
 public class TVFactory
 {
 	public static TV produceTV(String brand) throws Exception
