@@ -4,11 +4,11 @@ public class Administrator extends User
 {
 	public Administrator()
 	{
-		System.out.println("´´½¨¹ÜÀíÔ±¶ÔÏó£¡");
+		System.out.println("åˆ›å»ºç®¡ç†å‘˜å¯¹è±¡ï¼");
 	}
-	
+
 	public void diffOperation()
 	{
-		System.out.println("¹ÜÀíÔ±ÓµÓĞ´´½¨ºÍ¹ÜÀí¼ÙÌõÈ¨ÏŞ£¡");
+		System.out.println("ç®¡ç†å‘˜æ‹¥æœ‰åˆ›å»ºå’Œç®¡ç†å‡æ¡æƒé™ï¼");
 	}
 }

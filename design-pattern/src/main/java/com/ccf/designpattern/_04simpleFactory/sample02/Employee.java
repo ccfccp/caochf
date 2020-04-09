@@ -4,11 +4,11 @@ public class Employee extends User
 {
 	public Employee()
 	{
-		System.out.println("´´½¨Ô±¹¤¶ÔÏó£¡");
+		System.out.println("åˆ›å»ºå‘˜å·¥å¯¹è±¡ï¼");
 	}
-	
+
 	public void diffOperation()
 	{
-		System.out.println("Ô±¹¤ÓµÓĞ´´½¨¼ÙÌõÈ¨ÏŞ£¡");
+		System.out.println("å‘˜å·¥æ‹¥æœ‰åˆ›å»ºå‡æ¡æƒé™ï¼");
 	}
 }

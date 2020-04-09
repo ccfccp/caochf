@@ -6,17 +6,17 @@ public class TVFactory
 	{
 		if(brand.equalsIgnoreCase("Haier"))
 		{
-			System.out.println("µçÊÓ»ú¹¤³§Éú²úº£¶ûµçÊÓ»ú£¡");
+			System.out.println("ç”µè§†æœºå·¥å‚ç”Ÿäº§æµ·å°”ç”µè§†æœºï¼");
 			return new HaierTV();
 		}
 		else if(brand.equalsIgnoreCase("Hisense"))
 		{
-			System.out.println("µçÊÓ»ú¹¤³§Éú²úº£ĞÅµçÊÓ»ú£¡");
+			System.out.println("ç”µè§†æœºå·¥å‚ç”Ÿäº§æµ·ä¿¡ç”µè§†æœºï¼");
 			return new HisenseTV();
 		}
 		else
 		{
-			throw new Exception("¶Ô²»Æğ£¬Ôİ²»ÄÜÉú²ú¸ÃÆ·ÅÆµçÊÓ»ú£¡");
+			throw new Exception("å¯¹ä¸èµ·ï¼Œæš‚ä¸èƒ½ç”Ÿäº§è¯¥å“ç‰Œç”µè§†æœºï¼");
 		}
 	}
 }

@@ -4,11 +4,11 @@ public class Manager extends User
 {
 	public Manager()
 	{
-		System.out.println("´´½¨¾­Àí¶ÔÏó£¡");
+		System.out.println("åˆ›å»ºç»ç†å¯¹è±¡ï¼");
 	}
-	
+
 	public void diffOperation()
 	{
-		System.out.println("¾­ÀíÓµÓĞ´´½¨ºÍÉóÅú¼ÙÌõÈ¨ÏŞ£¡");
+		System.out.println("ç»ç†æ‹¥æœ‰åˆ›å»ºå’Œå®¡æ‰¹å‡æ¡æƒé™ï¼");
 	}
 }
