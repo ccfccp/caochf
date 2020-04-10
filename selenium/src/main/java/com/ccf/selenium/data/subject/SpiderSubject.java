@@ -1,5 +1,7 @@
 package com.ccf.selenium.data.subject;
 
+import com.ccf.selenium.data.defData.DataSort;
+
 import java.util.List;
 import java.util.Map;
 
@@ -44,6 +46,8 @@ public class SpiderSubject {
      * 排除条件.
      */
     private Conditions removeCondition;
-
-
+    /**
+     * 爬取数据分类信息.
+     */
+    private DataSort dataSort;
 }
