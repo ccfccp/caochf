@@ -50,4 +50,84 @@ public class SpiderSubject {
      * 爬取数据分类信息.
      */
     private DataSort dataSort;
+
+    public String getSubjectId() {
+        return subjectId;
+    }
+
+    public void setSubjectId(String subjectId) {
+        this.subjectId = subjectId;
+    }
+
+    public String getOriUrl() {
+        return oriUrl;
+    }
+
+    public void setOriUrl(String oriUrl) {
+        this.oriUrl = oriUrl;
+    }
+
+    public List<String> getNoSpiderUrlList() {
+        return noSpiderUrlList;
+    }
+
+    public void setNoSpiderUrlList(List<String> noSpiderUrlList) {
+        this.noSpiderUrlList = noSpiderUrlList;
+    }
+
+    public Map<String, String> getCompletSpiderUrlMap() {
+        return completSpiderUrlMap;
+    }
+
+    public void setCompletSpiderUrlMap(Map<String, String> completSpiderUrlMap) {
+        this.completSpiderUrlMap = completSpiderUrlMap;
+    }
+
+    public String getSpiderStartTime() {
+        return spiderStartTime;
+    }
+
+    public void setSpiderStartTime(String spiderStartTime) {
+        this.spiderStartTime = spiderStartTime;
+    }
+
+    public String getSpiderEndTime() {
+        return spiderEndTime;
+    }
+
+    public void setSpiderEndTime(String spiderEndTime) {
+        this.spiderEndTime = spiderEndTime;
+    }
+
+    public Conditions getAddUrlCondition() {
+        return addUrlCondition;
+    }
+
+    public void setAddUrlCondition(Conditions addUrlCondition) {
+        this.addUrlCondition = addUrlCondition;
+    }
+
+    public Conditions getEndCondition() {
+        return endCondition;
+    }
+
+    public void setEndCondition(Conditions endCondition) {
+        this.endCondition = endCondition;
+    }
+
+    public Conditions getRemoveCondition() {
+        return removeCondition;
+    }
+
+    public void setRemoveCondition(Conditions removeCondition) {
+        this.removeCondition = removeCondition;
+    }
+
+    public DataSort getDataSort() {
+        return dataSort;
+    }
+
+    public void setDataSort(DataSort dataSort) {
+        this.dataSort = dataSort;
+    }
 }

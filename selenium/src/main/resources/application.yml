@@ -1,0 +1,4 @@
+logging:
+  config: xxxx.xml
+  level:
+    cn.jay.repository: trace

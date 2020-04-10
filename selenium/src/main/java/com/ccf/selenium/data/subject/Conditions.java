@@ -15,4 +15,19 @@ public class Conditions {
      */
     private String conditionRelationOpr;
 
+    public List<Condition> getConditionList() {
+        return conditionList;
+    }
+
+    public void setConditionList(List<Condition> conditionList) {
+        this.conditionList = conditionList;
+    }
+
+    public String getConditionRelationOpr() {
+        return conditionRelationOpr;
+    }
+
+    public void setConditionRelationOpr(String conditionRelationOpr) {
+        this.conditionRelationOpr = conditionRelationOpr;
+    }
 }
