@@ -4,10 +4,10 @@ public class SubMealBuilderA extends MealBuilder
 {
 	public void buildFood()
 	{
-		meal.setFood("һ�����ȱ�");
+		meal.setFood("一个鸡腿堡");
 	}
 	public void buildDrink()
 	{
-	    meal.setDrink("һ������");
+		meal.setDrink("一杯可乐");
 	}
 }
