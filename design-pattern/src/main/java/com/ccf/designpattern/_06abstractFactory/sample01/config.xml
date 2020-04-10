@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <config>
-	<className>TCLFactory</className>
+	<className>com.ccf.designpattern._06abstractFactory.sample01.TCLFactory</className>
 </config>

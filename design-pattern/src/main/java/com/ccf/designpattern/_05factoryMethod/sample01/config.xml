@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <config>
-	<className>HaierTVFactory</className>
+	<className>com.ccf.designpattern._05factoryMethod.sample01.HaierTVFactory</className>
 </config>
