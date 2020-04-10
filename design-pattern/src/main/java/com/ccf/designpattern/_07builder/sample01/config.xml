@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <config>
-    <className>com.ccf.designpattern._07builder.sample01.SubMealBuilderB</className>
+    <className>com.ccf.designpattern._07builder.sample01.SubMealBuilderA</className>
 </config>
