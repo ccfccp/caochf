@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/selenium/selenium.iml" filepath="$PROJECT_DIR$/selenium/selenium.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootnacos/springbootnacos.iml" filepath="$PROJECT_DIR$/springbootnacos/springbootnacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootthymeleaf/springbootthymeleaf.iml" filepath="$PROJECT_DIR$/springbootthymeleaf/springbootthymeleaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tess4j/tess4j.iml" filepath="$PROJECT_DIR$/tess4j/tess4j.iml" />
     </modules>
   </component>
 </project>

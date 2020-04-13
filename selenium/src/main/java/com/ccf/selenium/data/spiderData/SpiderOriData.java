@@ -20,4 +20,5 @@ public class SpiderOriData {
      * 网页全部内容.
      */
     private String dataBig;
+
 }
