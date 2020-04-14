@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<config>
+	<!-- 爬取定义 -->
+	<subjects>
+		<subject>
+			<!-- 首页/入口 -->
+			<oriUrl></oriUrl>
+			<!-- 数据分类 -->
+			<dataSort></dataSort>
+			<!-- 添加条件 -->
+			<addUrlCondition>
+				<condition>
+
+				</condition>
+				<condition>
+
+				</condition>
+			</addUrlCondition>
+			<!-- 结束条件 -->
+			<endCondition>
+				<condition>
+
+				</condition>
+				<condition>
+
+				</condition>
+			</endCondition>
+			<!-- 排除条件 -->
+			<removeCondition>
+				<condition>
+
+				</condition>
+				<condition>
+
+				</condition>
+			</removeCondition>
+		</subject>
+
+		<subject>
+			<!-- 首页/入口 -->
+			<oriUrl></oriUrl>
+			<!-- 数据分类 -->
+			<dataSort></dataSort>
+			<!-- 添加条件 -->
+			<addUrlCondition>
+				<condition>
+
+				</condition>
+				<condition>
+
+				</condition>
+			</addUrlCondition>
+			<!-- 结束条件 -->
+			<endCondition>
+				<condition>
+
+				</condition>
+				<condition>
+
+				</condition>
+			</endCondition>
+			<!-- 排除条件 -->
+			<removeCondition>
+				<condition>
+
+				</condition>
+				<condition>
+
+				</condition>
+			</removeCondition>
+		</subject>
+	</subjects>
+
+</config>

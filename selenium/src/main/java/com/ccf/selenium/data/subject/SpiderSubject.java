@@ -47,6 +47,10 @@ public class SpiderSubject {
      */
     private Conditions removeCondition;
     /**
+     * 重复爬取标志.
+     */
+    private String multySpiderFlag;
+    /**
      * 爬取数据分类信息.
      */
     private DataSort dataSort;
