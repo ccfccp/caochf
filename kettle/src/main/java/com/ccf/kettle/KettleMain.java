@@ -19,7 +19,9 @@ import org.pentaho.di.trans.TransMeta;
 public class KettleMain {
     public static void main(String[] args) throws KettleException {
         //初始化环境
-        KettleEnvironment.init();
+        if (!KettleEnvironment.isInitialized()) {
+            KettleEnvironment.init();
+        }
         //创建DB资源库
         KettleDatabaseRepository repository=new KettleDatabaseRepository();
         DatabaseMeta databaseMeta=new DatabaseMeta("kettle_repo","mysql","jdbc","127.0.0.1","kettle_repository","3306","root","1");
