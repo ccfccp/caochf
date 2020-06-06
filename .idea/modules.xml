@@ -8,7 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/demom/demom.iml" filepath="$PROJECT_DIR$/demom/demom.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-pattern/design-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/design-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kettle/kettle.iml" filepath="$PROJECT_DIR$/kettle/kettle.iml" />
       <module fileurl="file://$PROJECT_DIR$/selenium/selenium.iml" filepath="$PROJECT_DIR$/selenium/selenium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spider/spider.iml" filepath="$PROJECT_DIR$/spider/spider.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootnacos/springbootnacos.iml" filepath="$PROJECT_DIR$/springbootnacos/springbootnacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootthymeleaf/springbootthymeleaf.iml" filepath="$PROJECT_DIR$/springbootthymeleaf/springbootthymeleaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/tess4j/tess4j.iml" filepath="$PROJECT_DIR$/tess4j/tess4j.iml" />

@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/selenium/pom.xml" />
         <option value="$PROJECT_DIR$/design-pattern/pom.xml" />
         <option value="$PROJECT_DIR$/tess4j/pom.xml" />
+        <option value="$PROJECT_DIR$/kettle/pom.xml" />
+        <option value="$PROJECT_DIR$/spider/pom.xml" />
       </list>
     </option>
   </component>
