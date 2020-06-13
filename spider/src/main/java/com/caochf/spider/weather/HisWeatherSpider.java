@@ -19,8 +19,19 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class HisWeatherSpider {
-    public static void main(String[] args) throws SQLException {
+    /**
+     * 爬取特定url的天气数据.
+     * @param weatherUrl
+     * @param conn
+     */
+    private static void spiderSpecialUrl(String weatherUrl, Connection conn) throws SQLException {
+        List<Map<String,String>> hisWeatherList = getHisWeatherDatas(weatherUrl,"beijing");
+        if(hisWeatherList!=null&&hisWeatherList.size()>0){
+            saveDatas2DB(conn,hisWeatherList,weatherUrl);
+        }
+    }
 
+    public static void main(String[] args) throws SQLException {
         String weatherUrl = PropertiesUtil.getPropertyValue("WEATHER_URL");
         String weatherRootUrl = PropertiesUtil.getPropertyValue("WEATHER_ROOT_URL");
         String weatherCitys = PropertiesUtil.getPropertyValue("WEATHER_CITYS");
@@ -36,13 +47,19 @@ public class HisWeatherSpider {
 
 
         System.setProperty("webdriver.chrome.driver", "E:\\tools\\selenium\\chromedriver.exe");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setBinary("C:\\Users\\caochf\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
-        WebDriver driver = new ChromeDriver(chromeOptions);//初始化浏览器
-
+        WebDriver driver = null;
         Connection conn = null;
         try {
             conn = DaoUtil.getConnection(dbDriver,dbUrl,dbUsername,dbPasswd);
+
+            /*if(true){
+                spiderSpecialUrl("http://lishi.tianqi.com/beijing/201801.html",conn);
+                return;
+            }*/
+
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.setBinary("C:\\Users\\caochf\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+            driver = new ChromeDriver(chromeOptions);//初始化浏览器
             if(weatherCitys!=null&&!"".equals(weatherCitys)
                     &&weatherTimeBegin!=null&&!"".equals(weatherTimeBegin)
                     &&weatherUrl!=null&&!"".equals(weatherUrl)) {
@@ -80,6 +97,9 @@ public class HisWeatherSpider {
                     if(innerUrlList!=null&&innerUrlList.size()>0){
                         List<Map<String,String>> weatherDataList = new ArrayList<Map<String,String>>();
                         for(String innerUrl:innerUrlList){
+                            /*if(innerUrl.indexOf("2011")==-1){
+                                continue;
+                            }*/
                             List<Map<String,String>> hisWeatherList = getHisWeatherDatas(innerUrl,weatherCity);
                             if(hisWeatherList!=null&&hisWeatherList.size()>0){
                                 saveDatas2DB(conn,hisWeatherList,innerUrl);
@@ -87,33 +107,14 @@ public class HisWeatherSpider {
                         }
                     }
 
-
-
-
-                    /*Date startDate = formatter.parse(weatherTimeBegin);
-                    Date endDate = formatter.parse(weatherTimeEnd);
-                    while (startDate.getTime() < endDate.getTime()) {
-                        String curDateStr = formatter.format(startDate);
-                        url = weatherUrl + "/" + weatherCity + "/" + curDateStr;
-
-                        driver.navigate().to(url);
-                        driver.manage().window().maximize();
-                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
-                        //获取当前浏览器的信息
-                        System.out.println("Title:" + driver.getTitle());
-                        System.out.println("currentUrl:" + driver.getCurrentUrl());
-                        driver.close();
-                    }*/
-
-
-
                 }
             }
         }catch(Exception e){
             e.printStackTrace();
         }finally {
-            driver.quit();
+            if(driver!=null){
+                driver.quit();
+            }
             if(conn!=null){
                 conn.close();
             }
@@ -128,8 +129,8 @@ public class HisWeatherSpider {
      */
     private static void saveDatas2DB(Connection conn, List<Map<String, String>> hisWeatherList, String innerUrl) throws SQLException {
         PreparedStatement pst = null;
-        String sql = "insert into his_weather (ID,CITY,WEATHER_DATE,TEMPERATURE_HIGH,TEMPERATURE_LOW,W_WEATHER,WIND_SIGN,WEATHER_POINT,spider_url,C_WEATHER_DATE,C_WEATHER_WEEK) " +
-                "values (?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into his_weather (ID,CITY,WEATHER_DATE,TEMPERATURE_HIGH,TEMPERATURE_LOW,W_WEATHER,WIND_SIGN,WEATHER_POINT,spider_url,C_WEATHER_DATE,C_WEATHER_WEEK,SPIDER_TIME) " +
+                "values (?,?,?,?,?,?,?,?,?,?,?,sysdate)";
 
         if(hisWeatherList!=null&&hisWeatherList.size()>0){
             try {
@@ -192,10 +193,28 @@ public class HisWeatherSpider {
         if(elementList!=null&&elementList.size()>0){
             for(WebElement element:elementList){
                 System.out.println(element.getTagName());
+                System.out.println(element.getText());
+                String className = element.getAttribute("class");
+                if("hide".equals(className)){
+                    try {
+                        WebElement moreDiv = driver.findElement(By.xpath("/html/body/div[8]/div[1]/div[4]/ul/div"));
+                        if (moreDiv != null && moreDiv.isEnabled()) {
+                            moreDiv.click();
+                        }
+                    }catch(Exception e){
+                        e.printStackTrace();
+                    }
+                }
                 if(element!=null&&"li".equals(element.getTagName())) {
                     List<WebElement> oneDataElementList = element.findElements(By.xpath("./div"));
 
-                    if(oneDataElementList!=null&&oneDataElementList.size()>=6){
+                    if(oneDataElementList!=null){
+                        for(WebElement w:oneDataElementList){
+                            System.out.println(w.getText());
+                        }
+                    }
+
+                    if(oneDataElementList!=null&&oneDataElementList.size()>=5){
                         Map<String, String> dataMap = new HashMap<String,String>();
                         dataMap.put("CITY",weatherCity);
                         dataMap.put("WEATHER_DATE",oneDataElementList.get(0).getText());
@@ -203,7 +222,11 @@ public class HisWeatherSpider {
                         dataMap.put("TEMPERATURE_LOW",oneDataElementList.get(2).getText());
                         dataMap.put("W_WEATHER",oneDataElementList.get(3).getText());
                         dataMap.put("WIND_SIGN",oneDataElementList.get(4).getText());
-                        dataMap.put("WEATHER_POINT",oneDataElementList.get(5).getText());
+                        if(oneDataElementList.size()>5) {
+                            dataMap.put("WEATHER_POINT", oneDataElementList.get(5).getText());
+                        }else{
+                            dataMap.put("WEATHER_POINT",null);
+                        }
                         String weatherDataStr = oneDataElementList.get(0).getText();
                         String weatherDate = null;
                         String weatherWeek = null;
