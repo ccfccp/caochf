@@ -218,8 +218,10 @@ public class HisWeatherSpider {
                         Map<String, String> dataMap = new HashMap<String,String>();
                         dataMap.put("CITY",weatherCity);
                         dataMap.put("WEATHER_DATE",oneDataElementList.get(0).getText());
-                        dataMap.put("TEMPERATURE_HIGH",oneDataElementList.get(1).getText());
-                        dataMap.put("TEMPERATURE_LOW",oneDataElementList.get(2).getText());
+                        String high = oneDataElementList.get(1).getText();
+                        dataMap.put("TEMPERATURE_HIGH",high==null?"":high.replace("℃",""));
+                        String low = oneDataElementList.get(2).getText();
+                        dataMap.put("TEMPERATURE_LOW",low==null?"":low.replace("℃",""));
                         dataMap.put("W_WEATHER",oneDataElementList.get(3).getText());
                         dataMap.put("WIND_SIGN",oneDataElementList.get(4).getText());
                         if(oneDataElementList.size()>5) {
