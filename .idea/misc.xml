@@ -15,7 +15,14 @@
         <option value="$PROJECT_DIR$/kettle/pom.xml" />
         <option value="$PROJECT_DIR$/spider/pom.xml" />
         <option value="$PROJECT_DIR$/nature/pom.xml" />
+        <option value="$PROJECT_DIR$/jeeidp/pom.xml" />
+        <option value="$PROJECT_DIR$/code-generator/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/jeeidp/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
