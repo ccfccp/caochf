@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.caochf.nature.repository.CDictDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.caochf.nature.entity.CDictEntity" id="cDictMap">
+        <result property="dictId" column="DICT_ID"/>
+        <result property="dictCode" column="DICT_CODE"/>
+        <result property="dictName" column="DICT_NAME"/>
+        <result property="isActive" column="IS_ACTIVE"/>
+        <result property="sortNo" column="SORT_NO"/>
+    </resultMap>
+
+
+</mapper>
