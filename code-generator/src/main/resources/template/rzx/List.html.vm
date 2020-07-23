@@ -19,6 +19,7 @@
     <script src="/js/common.js"></script>
     <script src="/libs/jquery-confirm.js"></script>
     <script type="text/javascript" src="/libs/jquery.my-modal.1.1.js"></script>
+    <script type="text/javascript" src="/libs/jquery.form.js"></script>
 </head>
 <body>
 <div id="rrapp">
@@ -31,6 +32,7 @@
 
         <a class="btn btn-default" @click="query">查询</a>
         <a class="btn btn-default" @click="addHandle" data-toggle="modal" data-target="#myModal">新增</a>
+        <a class="btn btn-default" @click="updateHandle" data-toggle="modal" data-target="#myModal">修改</a>
     </div>
     <table id="jqGrid"></table>
     <div id="jqGridPager"></div>
@@ -47,11 +49,11 @@
                 <div class="container">
                     <div>
                         <div class="col-md-6 column">
-                            <form role="form">
+                            <form role="form" id="form" method="post" enctype="multipart/form-data">
 #foreach($column in $columns)
                                 <div class="form-group" style="white-space: nowrap;display: flex;">
                                     <label style="width:200px;display:block;overflow:hidden;white-space:nowrap; ">${column.comments}</label>
-                                    <input type="text" id="${column.attrname}" class="form-control" style="width: 45%;display: inline-block;">
+                                    <input type="text" id="${column.attrname}" name="${column.attrname}" class="form-control" style="width: 45%;display: inline-block;">
                                 </div>
 #end
                             </form>

@@ -55,11 +55,104 @@ var vm = new Vue({
             }).trigger("reloadGrid");
         },
         addHandle: function () {
+            #foreach($column in $columns)
+                jQuery("#${column.attrname}").val("");
+            #end
             my_modal.show();
+        },
+        updateHandle: function () {
+            var ids = $("#jqGrid").jqGrid('getGridParam', 'selarrrow');
+            if(ids!=undefined&&ids.length==1){
+                // 获取数据
+                var url = "${pathName}/selectByPrimaryKey";
+                url = url + "?key="+ids[0];
+                $.ajax({
+                    url:url, //请求的url地址
+                    dataType:"json", //返回格式为json
+                    async:true,//请求是否异步，默认为异步，这也是ajax重要特性
+                    data:{ }, //参数值
+                    type:"GET", //请求方式
+                    success:function(ret){
+                        //请求成功时处理
+                        // 数据写入模态框
+#foreach($column in $columns)
+                        jQuery("#${column.attrname}").val(ret.${column.attrname});
+#end
+                        // 展示模态框
+                        my_modal.show();
+                    },
+                    error:function(ret){
+                        //请求出错处理
+                        alert("查询失败！<br/>"+JSON.stringify(ret));
+                    }
+                });
+
+
+
+            }else{
+                alert("请选择一条您要修改的记录!");
+            }
+
         }
     }
 });
-
+// 新增/修改 提交按钮.
 var my_modal = new MyModal.modal(function() {
-    alert("你点击了确定");
+#foreach ($column in $columns)
+    #if($column.columnName == $pk.columnName)
+        if(jQuery("#${column.attrname}").val()!=''){// 修改
+            if(check()){
+                var requestUrl = "${pathName}/updateByPrimaryKey";
+                //表单的异步提交
+                var form=document.getElementById("form");
+                var fd =new FormData(form);
+                $.ajax({
+                    url: requestUrl,
+                    type: "POST",
+                    data: fd,
+                    processData: false,  // 告诉jQuery不要去处理发送的数据
+                    contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
+                    error:function(data){
+                        alert("保存失败");
+                    },
+                    success: function(response,status,xhr){
+                        alert('保存成功！');
+                        // 隐藏模态框
+                        my_modal.hide();
+                        // 再次查询信息.
+                        $("#jqGrid").jqGrid('setGridParam', {
+                            postData: {
+                                #foreach($column in $columns)
+                                    '${column.attrname}': vm.q.${column.attrname}
+                                    #if($velocityCount != $columns.size()),#end
+                                #end
+                            },
+                            page: 1
+                        }).trigger("reloadGrid");
+                    }
+                });
+            }
+        }else{ // 新增
+            if(check()){
+                var requestUrl = "${pathName}/insert";
+                //表单的异步提交
+                $("#form").ajaxSubmit({
+                    type : "post",
+                    dataType : "json",
+                    url: requestUrl,
+                    error:function(data){
+                        alert("保存失败");
+                    },
+                    success:function(data){
+                        alert("保存成功");
+                    }
+                });
+            }
+        }
+    #end
+#end
 });
+// 页面校验.
+function check(){
+    return true;
+}

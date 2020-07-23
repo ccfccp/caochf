@@ -28,7 +28,7 @@ public class ${className}Controller {
     private ${className}Service ${classname}Service;
 
     @ApiOperation(value = "新增")
-    @PostMapping(value = "insert")
+    @RequestMapping(value = "insert")
     public Object insert(${className}Entity ${classname}){
         return ${classname}Service.insert(${classname});
     }
@@ -40,7 +40,7 @@ public class ${className}Controller {
     }
 
     @ApiOperation(value = "根据主键更新")
-    @PostMapping(value = "updateByPrimaryKey")
+    @RequestMapping(value = "updateByPrimaryKey")
     public int updateByPrimaryKey(${className}Entity ${classname}) {
         return ${classname}Service.updateByPrimaryKey(${classname});
     }
