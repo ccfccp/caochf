@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>${comments}列表</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/plugins/jqgrid/ui.jqgrid-bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/jquery.my-modal.1.1.winStyle.css" />
+    <script src="/libs/jquery.min.js"></script>
+    <script src="/plugins/layer/layer.js"></script>
+    <script src="/libs/bootstrap.min.js"></script>
+    <script src="/libs/vue.min.js"></script>
+    <script src="/plugins/jqgrid/grid.locale-cn.js"></script>
+    <script src="/plugins/jqgrid/jquery.jqGrid.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/libs/jquery-confirm.js"></script>
+    <script type="text/javascript" src="/libs/jquery.my-modal.1.1.js"></script>
+</head>
+<body>
+<div id="rrapp">
+    <div class="grid-btn">
+#foreach($column in $columns)
+    <div class="form-group col-sm-2">
+        <input type="text" class="form-control" v-model="q.${column.attrname}" @keyup.enter="query" placeholder="${column.comments}">
+    </div>
+#end
+
+        <a class="btn btn-default" @click="query">查询</a>
+        <a class="btn btn-default" @click="addHandle" data-toggle="modal" data-target="#myModal">新增</a>
+    </div>
+    <table id="jqGrid"></table>
+    <div id="jqGridPager"></div>
+
+    <div class="m-modal" id="m-modal">
+        <div class="m-modal-dialog">
+            <div class="m-top">
+                <h4 class="m-modal-title">
+                    数据维护
+                </h4>
+                <span class="m-modal-close">&times;</span>
+            </div>
+            <div class="m-middle">
+                <div class="container">
+                    <div>
+                        <div class="col-md-6 column">
+                            <form role="form">
+#foreach($column in $columns)
+                                <div class="form-group" style="white-space: nowrap;display: flex;">
+                                    <label style="width:200px;display:block;overflow:hidden;white-space:nowrap; ">${column.comments}</label>
+                                    <input type="text" id="${column.attrname}" class="form-control" style="width: 45%;display: inline-block;">
+                                </div>
+#end
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-bottom">
+                <button class="m-btn-sure">确定</button>
+                <button class="m-btn-cancel">取消</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="./${pathName}-list.js"></script>
+</body>
+</html>

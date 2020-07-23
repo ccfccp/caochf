@@ -47,6 +47,10 @@ public class GenUtils {
         templates.add("template/rzx/Dao.xml.vm");
         templates.add("template/rzx/Service.java.vm");
         templates.add("template/rzx/Controller.java.vm");
+        templates.add("template/index.vue.vm");
+//        templates.add("template/menu.sql.vm");
+        templates.add("template/rzx/List.html.vm");
+        templates.add("template/rzx/List.js.vm");
 
         return templates;
     }
@@ -137,7 +141,9 @@ public class GenUtils {
 
             try {
                 //添加到zip
-                zip.putNextEntry(new ZipEntry(getFileName(template, tableEntity.getClassName(), StringUtils.isNotBlank(packageName) ? packageName : config.getString("package"), StringUtils.isNotBlank(moduleName) ? moduleName : config.getString("moduleName"))));
+                zip.putNextEntry(
+                        new ZipEntry(
+                                getFileName(template, tableEntity.getClassName(), StringUtils.isNotBlank(packageName) ? packageName : config.getString("package"), StringUtils.isNotBlank(moduleName) ? moduleName : config.getString("moduleName"))));
                 IOUtils.write(sw.toString(), zip, "UTF-8");
                 IOUtils.closeQuietly(sw);
                 zip.closeEntry();
@@ -221,6 +227,16 @@ public class GenUtils {
         if (template.contains("add-or-update.vue.vm")) {
             return "main" + File.separator + "resources" + File.separator + "src" + File.separator + "views" + File.separator + "modules" +
                     File.separator + moduleName + File.separator + className.toLowerCase() + "-add-or-update.vue";
+        }
+
+        if(template.contains("List.html.vm")){
+            return "main" + File.separator + "resources" + File.separator + "src" + File.separator + "views" + File.separator + "modules" +
+                    File.separator + moduleName + File.separator + className.toLowerCase() + "-list.html";
+        }
+
+        if(template.contains("List.js.vm")){
+            return "main" + File.separator + "resources" + File.separator + "src" + File.separator + "views" + File.separator + "modules" +
+                    File.separator + moduleName + File.separator + className.toLowerCase() + "-list.js";
         }
 
         return null;
