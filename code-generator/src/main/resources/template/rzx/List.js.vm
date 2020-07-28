@@ -93,6 +93,42 @@ var vm = new Vue({
                 alert("请选择一条您要修改的记录!");
             }
 
+        },
+        delete: function () {
+            var ids = $("#jqGrid").jqGrid('getGridParam', 'selarrrow');
+            if(ids!=undefined&&ids.length>0){
+                var url = "${pathName}/delete";
+                url = url + "?key="+ids;
+
+                $.ajax({
+                    url: requestUrl,
+                    type: "GET",
+                    data: {},
+                    processData: false,  // 告诉jQuery不要去处理发送的数据
+                    contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
+                    error:function(data){
+                        alert("删除失败");
+                    },
+                    success: function(response,status,xhr){
+                        alert('删除成功！');
+                        // 隐藏模态框
+                        my_modal.hide();
+                        // 再次查询信息.
+                        $("#jqGrid").jqGrid('setGridParam', {
+                            postData: {
+                                #foreach($column in $columns)
+                                    '${column.attrname}': vm.q.${column.attrname}
+                                    #if($velocityCount != $columns.size()),#end
+                                #end
+                            },
+                            page: 1
+                        }).trigger("reloadGrid");
+                    }
+                });
+
+            }else{
+                alert("请选择您要删除的数据");
+            }
         }
     }
 });

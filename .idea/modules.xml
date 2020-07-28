@@ -9,8 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/demom/demom.iml" filepath="$PROJECT_DIR$/demom/demom.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-pattern/design-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/design-pattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jeeidp/jeeidp-common/jeeidp-common.iml" filepath="$PROJECT_DIR$/jeeidp/jeeidp-common/jeeidp-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jeeidp/jeeidp-system/jeeidp-system.iml" filepath="$PROJECT_DIR$/jeeidp/jeeidp-system/jeeidp-system.iml" />
       <module fileurl="file://$PROJECT_DIR$/kettle/kettle.iml" filepath="$PROJECT_DIR$/kettle/kettle.iml" />
       <module fileurl="file://$PROJECT_DIR$/nature/nature.iml" filepath="$PROJECT_DIR$/nature/nature.iml" />
       <module fileurl="file://$PROJECT_DIR$/selenium/selenium.iml" filepath="$PROJECT_DIR$/selenium/selenium.iml" />
