@@ -32,8 +32,8 @@
 
         <a class="btn btn-default" @click="query">查询</a>
         <a class="btn btn-default" @click="addHandle" data-toggle="modal" data-target="#myModal">新增</a>
-        <a class="btn btn-default" @click="updateHandle" data-toggle="modal" data-target="#myModal">修改</a>
-        <a class="btn btn-default" @click="delete">删除</a>
+        <a class="btn btn-default" @click="updateHandle" >修改</a>
+        <a class="btn btn-default" @click="deleteHandle">删除</a>
     </div>
     <table id="jqGrid"></table>
     <div id="jqGridPager"></div>
@@ -57,6 +57,7 @@
                                     <input type="text" id="${column.attrname}" name="${column.attrname}" class="form-control" style="width: 45%;display: inline-block;">
                                 </div>
 #end
+                                <input type="hidden" id="oprFlag_" />
                             </form>
                         </div>
                     </div>

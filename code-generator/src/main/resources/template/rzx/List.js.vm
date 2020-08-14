@@ -58,6 +58,7 @@ var vm = new Vue({
             #foreach($column in $columns)
                 jQuery("#${column.attrname}").val("");
             #end
+            jQuery("#oprFlag_").val("insert");
             my_modal.show();
         },
         updateHandle: function () {
@@ -78,6 +79,7 @@ var vm = new Vue({
 #foreach($column in $columns)
                         jQuery("#${column.attrname}").val(ret.${column.attrname});
 #end
+                        jQuery("#oprFlag_").val("update");
                         // 展示模态框
                         my_modal.show();
                     },
@@ -94,16 +96,16 @@ var vm = new Vue({
             }
 
         },
-        delete: function () {
+        deleteHandle: function () {
             var ids = $("#jqGrid").jqGrid('getGridParam', 'selarrrow');
             if(ids!=undefined&&ids.length>0){
-                var url = "${pathName}/delete";
-                url = url + "?key="+ids;
+                var requestUrl = "${pathName}/delete";
+                requestUrl = requestUrl + "?key="+ids;
 
                 $.ajax({
                     url: requestUrl,
                     type: "GET",
-                    data: {},
+                    ## data: {},
                     processData: false,  // 告诉jQuery不要去处理发送的数据
                     contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
                     error:function(data){
@@ -130,13 +132,14 @@ var vm = new Vue({
                 alert("请选择您要删除的数据");
             }
         }
+
     }
 });
 // 新增/修改 提交按钮.
 var my_modal = new MyModal.modal(function() {
 #foreach ($column in $columns)
     #if($column.columnName == $pk.columnName)
-        if(jQuery("#${column.attrname}").val()!=''){// 修改
+        if(jQuery("#oprFlag_").val()=='update'){// 修改
             if(check()){
                 var requestUrl = "${pathName}/updateByPrimaryKey";
                 //表单的异步提交
@@ -181,6 +184,16 @@ var my_modal = new MyModal.modal(function() {
                     },
                     success:function(data){
                         alert("保存成功");
+                        // 再次查询信息.
+                        $("#jqGrid").jqGrid('setGridParam', {
+                            postData: {
+                                #foreach($column in $columns)
+                                    '${column.attrname}': vm.q.${column.attrname}
+                                    #if($velocityCount != $columns.size()),#end
+                                #end
+                            },
+                            page: 1
+                        }).trigger("reloadGrid");
                     }
                 });
             }
