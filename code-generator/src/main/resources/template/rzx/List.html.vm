@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/plugins/jqgrid/ui.jqgrid-bootstrap.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/jquery.my-modal.1.1.winStyle.css" />
+    <link rel="stylesheet" href="/css/xcConfirm.css">
     <script src="/libs/jquery.min.js"></script>
     <script src="/plugins/layer/layer.js"></script>
     <script src="/libs/bootstrap.min.js"></script>
@@ -20,6 +21,7 @@
     <script src="/libs/jquery-confirm.js"></script>
     <script type="text/javascript" src="/libs/jquery.my-modal.1.1.js"></script>
     <script type="text/javascript" src="/libs/jquery.form.js"></script>
+    <script type="text/javascript" src="/libs/xcConfirm.js"></script>
 </head>
 <body>
 <div id="rrapp">
