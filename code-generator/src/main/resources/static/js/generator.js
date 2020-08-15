@@ -87,7 +87,7 @@ var vm = new Vue({
             if (author == undefined) {
                 author = "";
             }
-            location.href = "sys/generator/assist?table=" + tableName + "&moduleName=" + moduleName + "&packageName=" + packageName + "&author=" + author;
+            location.href = "/assist-list.html?table=" + tableName;
         }
     }
 });
