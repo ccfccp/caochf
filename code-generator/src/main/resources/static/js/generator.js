@@ -68,6 +68,26 @@ var vm = new Vue({
                 author = "";
             }
             location.href = "sys/generator/code?tables=" + tableNames.join() + "&moduleName=" + moduleName + "&packageName=" + packageName + "&author=" + author;
+        },
+        assistHandle:function () {
+            var tableName = getSelectedRow();
+            if (tableName == null) {
+                return;
+            }
+            var moduleName = vm.q.moduleName;
+            var packageName = vm.q.package;
+            var author = vm.q.author;
+
+            if (moduleName == undefined) {
+                moduleName = "";
+            }
+            if (packageName == undefined) {
+                packageName = "";
+            }
+            if (author == undefined) {
+                author = "";
+            }
+            location.href = "sys/generator/assist?table=" + tableName + "&moduleName=" + moduleName + "&packageName=" + packageName + "&author=" + author;
         }
     }
 });

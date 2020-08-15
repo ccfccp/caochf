@@ -59,4 +59,25 @@ public class SysGeneratorController {
 
         IOUtils.write(data, response.getOutputStream());
     }
+
+    /**
+     * 展示辅助信息.
+     * @param table
+     * @param moduleName
+     * @param packageName
+     * @param author
+     * @param response
+     * @throws IOException
+     */
+    @RequestMapping("/assist")
+    public void assist(String table, String moduleName, String packageName, String author, HttpServletResponse response) throws IOException {
+        byte[] data = sysGeneratorService.generatorCode(table.split(","), moduleName, packageName, author);
+
+        response.reset();
+        response.setHeader("Content-Disposition", "attachment; filename=\"generator-code.zip\"");
+        response.addHeader("Content-Length", "" + data.length);
+        response.setContentType("application/octet-stream; charset=UTF-8");
+
+        IOUtils.write(data, response.getOutputStream());
+    }
 }
