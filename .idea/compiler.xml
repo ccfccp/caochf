@@ -16,6 +16,7 @@
         <module name="jeeidp-common" />
         <module name="jeeidp-system" />
         <module name="kettle" />
+        <module name="mapping" />
         <module name="nature" />
         <module name="selenium" />
         <module name="spider" />
@@ -37,6 +38,7 @@
       <module name="jeeidp-system" target="1.8" />
       <module name="jeeidp-web" target="1.8" />
       <module name="kettle" target="1.8" />
+      <module name="mapping" target="1.8" />
       <module name="nature" target="1.8" />
       <module name="selenium" target="1.8" />
       <module name="spider" target="1.8" />
