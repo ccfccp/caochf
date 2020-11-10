@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/jeeidp/pom.xml" />
         <option value="$PROJECT_DIR$/code-generator/pom.xml" />
         <option value="$PROJECT_DIR$/mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/jacob_test/pom.xml" />
+        <option value="$PROJECT_DIR$/caochf_test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
