@@ -54,6 +54,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="c_01_meta" options="-parameters" />
+      <module name="caochf_test" options="-parameters" />
       <module name="code-generator" options="-parameters" />
       <module name="consume" options="-parameters" />
       <module name="demo" options="-parameters" />

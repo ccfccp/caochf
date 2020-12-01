@@ -1,0 +1,28 @@
+server:
+  port: 8980
+
+spring:
+  datasource:
+    username: root
+    password: 1
+    url: jdbc:mysql://localhost:3306/caochf?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+    type: com.alibaba.druid.pool.DruidDataSource
+  thymeleaf:
+    cache: false # 开发时关闭缓存,不然没法看到实时页面
+    mode: HTML # 用非严格的 HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.caochf.entity
+
+#showSql
+logging:
+  level:
+    com:
+      caochf:
+        mapper : debug

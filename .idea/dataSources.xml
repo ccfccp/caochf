@@ -8,11 +8,19 @@
       <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
       <jdbc-url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="mytest@localhost" uuid="9cacc64a-5cca-4242-9d05-62e357f1403d">
+    <data-source source="LOCAL" name="caochf@localhost" uuid="d101ef86-b46d-4501-89e0-83df51e48b9f">
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
-      <jdbc-driver>dm.jdbc.driver.DmDriver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/mytest?serverTimezone=UTC</jdbc-url>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/caochf</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
     </data-source>
   </component>
 </project>

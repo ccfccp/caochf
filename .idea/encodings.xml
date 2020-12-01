@@ -3,6 +3,7 @@
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/c_01_meta" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/c_01_meta/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/caochf_test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/code-generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consume" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
@@ -11,9 +12,6 @@
     <file url="file://$PROJECT_DIR$/demom/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-pattern" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jeeidp" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jeeidp/jeeidp-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jeeidp/jeeidp-system" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kettle" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/selenium" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spider" charset="UTF-8" />
