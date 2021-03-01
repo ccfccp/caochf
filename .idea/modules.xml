@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/spider/spider.iml" filepath="$PROJECT_DIR$/spider/spider.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootnacos/springbootnacos.iml" filepath="$PROJECT_DIR$/springbootnacos/springbootnacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootthymeleaf/springbootthymeleaf.iml" filepath="$PROJECT_DIR$/springbootthymeleaf/springbootthymeleaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taskRunning/taskRunning.iml" filepath="$PROJECT_DIR$/taskRunning/taskRunning.iml" />
       <module fileurl="file://$PROJECT_DIR$/tess4j/tess4j.iml" filepath="$PROJECT_DIR$/tess4j/tess4j.iml" />
     </modules>
   </component>

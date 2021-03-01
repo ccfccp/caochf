@@ -24,6 +24,7 @@
         <module name="spider" />
         <module name="springbootnacos" />
         <module name="springbootthymeleaf" />
+        <module name="taskRunning" />
         <module name="tess4j" />
       </profile>
     </annotationProcessing>
@@ -48,6 +49,7 @@
       <module name="spider" target="1.8" />
       <module name="springbootnacos" target="1.8" />
       <module name="springbootthymeleaf" target="1.8" />
+      <module name="taskRunning" target="1.8" />
       <module name="tess4j" target="1.8" />
     </bytecodeTargetLevel>
   </component>
