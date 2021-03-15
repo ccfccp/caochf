@@ -14,7 +14,13 @@ public class POITest {
 
         try {
             fis = new FileInputStream(filePath);
-            Workbook wb = new XSSFWorkbook(fis);
+            Workbook wb = null;
+            try {
+                wb = new XSSFWorkbook(fis);
+            }catch(Exception ee){
+                ee.printStackTrace();
+                wb = new HSSFWorkbook(fis);
+            }
             Sheet sheet = wb.getSheetAt(0);
             int rowNum = sheet.getLastRowNum();
             int totalSheets = wb.getNumberOfSheets() - 1;
