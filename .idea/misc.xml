@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/jacob_test/pom.xml" />
         <option value="$PROJECT_DIR$/caochf_test/pom.xml" />
         <option value="$PROJECT_DIR$/taskRunning/pom.xml" />
+        <option value="$PROJECT_DIR$/lucene_test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
