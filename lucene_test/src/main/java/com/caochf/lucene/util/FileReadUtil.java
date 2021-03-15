@@ -17,21 +17,22 @@ public class FileReadUtil {
      * @param file
      * @return
      */
-    public static String readFileContent(File file) throws IOException {
+    public static String readFileContent(File file) {
         String content = "";
         String fileType = CheckFileFormatUtil.getFileType(file);
         if("doc".equals(fileType)){
             content = readWord(file);
         }else if("docx".equals(fileType)){
             content = readWord2007(file);
-        }else if("xlsx".equals(fileType)||"xls".equals(fileType)){
+        }else if("xlsx".equals(fileType)){
             content = readWord2007(file);
+        }else if("xls".equals(fileType)){
+            content = readWord(file);
         }else if("pdf".equals(fileType)){
             content = readPdf(file);
         }else if("html".equals(fileType)){
             content = readHtml(file);
         }else{ // 其他情况直接按txt方式进行处理.
-//            content = FileUtils.readFileToString(file);
             content = readTxt(file);
         }
 
