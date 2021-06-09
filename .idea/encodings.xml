@@ -13,11 +13,13 @@
     <file url="file://$PROJECT_DIR$/design-pattern" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-pattern/src/main/java/com/ccf/designpattern" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kettle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mulitLanguage" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/selenium" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootnacos" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootthymeleaf" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootthymeleaf/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tess4j" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/voice" charset="UTF-8" />
   </component>
 </project>

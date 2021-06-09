@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class FileScanUtil {
-    static String SCAN_PATH = "";// 检索的根目录.
+    static String SCAN_PATH = "F:\\work\\solr-8.7.0\\example";// 检索的根目录.
     static Map<String,List<String>> pointMap = new HashMap<String,List<String>>();// Map<keyword,List<filePath>
     static List<String> keywordList = new ArrayList<String>();
     static {
@@ -17,6 +17,10 @@ public class FileScanUtil {
 
     public static void main(String[] args){
         System.out.println("文件内容检索-----begin!");
+        boolean scanFlag = scanFilePath(SCAN_PATH);
+        if(scanFlag){
+            System.out.println("找到需要检索的内容！pointMap="+pointMap);
+        }
 
         System.out.println("文件内容检索-----end!");
     }
@@ -26,6 +30,48 @@ public class FileScanUtil {
      */
     private static void setKeyWordList() {
         keywordList.add("10.10.4.87");
+    }
+
+    /**
+     * 检索目录.
+     * @param filePath
+     * @return
+     */
+    public static boolean scanFilePath(String filePath){
+        File dirFile = new File(filePath);
+        boolean existFlag = false;
+        if(dirFile!=null&&dirFile.exists()&&dirFile.isDirectory()){
+            List<File> listFiles = collectFileList(dirFile);
+            for(File file:listFiles){
+                String fileContent = scanFileContent(file);
+                if(getExistFlag(fileContent,file)){
+                    existFlag = true;
+                }
+            }
+        }else{
+            System.out.println("路径【"+filePath+"】不是目录，请重新输入！");
+        }
+        return existFlag;
+    }
+
+    /**
+     * 取目录下的所有具体文件.
+     * @param dirFile
+     * @return
+     */
+    private static List<File> collectFileList(File dirFile) {
+        List<File> fileList = new ArrayList<File>();
+        File[] listFiles = dirFile.listFiles();
+        if(listFiles!=null&&listFiles.length>0){
+            for(File f:listFiles){
+                if(f.isDirectory()){
+                    fileList.addAll(collectFileList(f));
+                }else{
+                    fileList.add(f);
+                }
+            }
+        }
+        return fileList;
     }
 
     /**

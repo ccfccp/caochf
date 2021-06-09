@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="voice:war">
+    <output-path>$PROJECT_DIR$/voice/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>voice</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="voice-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="voice:war exploded" />
+    </root>
+  </artifact>
+</component>

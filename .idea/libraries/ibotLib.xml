@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ibotLib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/ibot/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/ibot/lib" recursive="false" />
+  </library>
+</component>
